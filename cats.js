@@ -97,7 +97,7 @@ start();
 let catMarquee = document.getElementById('marquee');
 
 for(let i = 0, l = catArray.length; i < l; i++){
-    catMarquee.innerHTML += `<img src="/images/cats/${catArray[i].name}-idle.png" />`
+    catMarquee.innerHTML += `<img src="images/cats/${catArray[i].name}-idle.png" />`
 }
 
 catMarquee.style.width = (catArray.length * 150) + 'px';
