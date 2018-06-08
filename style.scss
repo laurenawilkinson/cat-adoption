@@ -139,9 +139,9 @@ footer{
             display: block;
         }
         
-        h3{
+        h3, span{
             display: inline-block;
-            margin: 5px 10px;
+            margin: 5px;
         }
         
         img{
@@ -275,10 +275,8 @@ footer{
             
             #info{
                 font-size: 1.2em;
+                padding: 5px;
             }
-            
-            
-            
         }
     }
 }
@@ -364,6 +362,13 @@ footer{
             display:block;
             margin: 15px auto;
             width: 90%;
+        }
+        
+        .left-col{
+            h3, span{
+                display:block;
+                text-align: center;
+            }
         }
         
         .right-col{

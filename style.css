@@ -101,9 +101,9 @@ footer {
       margin: 10px auto;
       text-align: center;
       display: block; }
-    #game .left-col h3 {
+    #game .left-col h3, #game .left-col span {
       display: inline-block;
-      margin: 5px 10px; }
+      margin: 5px; }
     #game .left-col img {
       margin-top: 40px; }
     #game .left-col h2 {
@@ -199,7 +199,8 @@ footer {
           #game .right-col .interaction ul li:last-child:hover:before {
             opacity: 1; }
     #game .right-col .interaction #info {
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      padding: 5px; }
 
 #marquee {
   position: absolute;
@@ -259,6 +260,9 @@ footer {
       display: block;
       margin: 15px auto;
       width: 90%; }
+    #game .left-col h3, #game .left-col span {
+      display: block;
+      text-align: center; }
     #game .right-col .col-1, #game .right-col .col-2 {
       width: 80%; }
     #game .right-col .interaction ul {

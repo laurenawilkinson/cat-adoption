@@ -177,7 +177,7 @@ function chosenStarter(item){
     game.innerHTML = `<h2 class="heading">Congratulations! Your chosen starter is ${myCat.name}</h2>
                     <p>If you would like to <strong>change</strong> your cats name, type a name below and press enter</p>
                     <p>If you want to keep the name <strong>${myCat.name}</strong>, press enter to continue</p>
-                    <input type="text" id="chooseName" placeholder="enter a name for your cat" maxlength="16" autofocus>`;
+                    <input type="text" id="chooseName" placeholder="enter a name" maxlength="16" autofocus>`;
     let nameInput = document.getElementById('chooseName');
     
     // set char limit
@@ -308,9 +308,9 @@ function startGame(myCat){
                         <h2>${myCat.name}</h2>
                         <div class="default" id="item"></div>
                         <img src="images/cats/${myCat.breed}-idle.png" id="cat-pic" onclick="myCat.pet()">
-                        <p><h3>Purrsonality:</h3> ${myCat.personality}</p>
-                        <p><h3>Description:</h3> ${myCat.description}</p>
-                        <p><h3>Power Lvl:</h3> ${myCat.powerLevel}</p>
+                        <p><h3>Purrsonality:</h3> <span>${myCat.personality}</span></p>
+                        <p><h3>Description:</h3> <span>${myCat.description}</span></p>
+                        <p><h3>Power Lvl:</h3> <span>${myCat.powerLevel}</span></p>
                     </div>
                     <div class="col right-col">
                         <div class="col col-1">
