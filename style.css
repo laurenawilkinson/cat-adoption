@@ -240,15 +240,17 @@ footer {
       vertical-align: top; }
     #game .cat-button {
       width: 15%; } }
+@media (max-width: 970px) {
+  #marquee {
+    display: none; } }
 @media (max-width: 768px) {
   #container {
     height: auto; }
 
-  #marquee {
-    display: none; }
-
   #game {
     height: inherit; }
+    #game .cat-button {
+      width: 25%; }
     #game .starter-tile {
       height: auto;
       vertical-align: top;
@@ -272,5 +274,8 @@ footer {
         #game .right-col .interaction ul li .cat-button {
           width: 100%;
           margin: 0; } }
+@media (max-width: 425px) {
+  #game .cat-button {
+    width: 35%; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -336,18 +336,24 @@ footer{
     }
 }
 
+@media (max-width: 970px){
+    #marquee{
+        display: none;
+    }
+}
+
 // mobile
 
 @media (max-width: 768px){
     #container{
         height: auto;
     }
-    #marquee{
-        display: none;
-    }
     
     #game{
         height: inherit;
+        .cat-button{
+            width: 25%;
+        }
         .starter-tile{
             height: auto;
             vertical-align: top;
@@ -385,6 +391,14 @@ footer{
                     }
                 }
             }   
+        }
+    }
+}
+
+@media (max-width: 425px){
+    #game{
+        .cat-button{
+            width: 35%;
         }
     }
 }
