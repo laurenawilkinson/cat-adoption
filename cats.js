@@ -274,7 +274,7 @@ function startGame(myCat){
         }
     };
     myCat.wash = () => {
-        if(myCat.clean > 55){
+        if(myCat.clean > 70){
             myCat.info = `${myCat.name} doesnt need cleaning right now`;
         }
         else if(myCat.happiness < 20){
@@ -288,7 +288,7 @@ function startGame(myCat){
         else{
             myCat.happiness -= 20;
             myCat.energy -= 20;
-            myCat.clean += 45;
+            myCat.clean += 30;
             myCat.info = `You washed ${myCat.name}. They didnt like the water, but at least theyre clean!`;
         }
     }
