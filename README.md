@@ -2,7 +2,7 @@
 A little personal game project made using vanilla js
 
 ## About
-Play the game [here](https://laurenawilkinson.github.io/cat-adoption)!
+Play the game [here](https://laurenawilkinson.github.io/cat-adoption)! The app is responsive as well so it's playable on the go.
 
 The gameplay mechanics are very basic. Choose your cat, name them, then take care of them. Don't let their needs bars fall!
 
