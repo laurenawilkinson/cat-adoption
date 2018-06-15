@@ -43,6 +43,26 @@ let game = document.getElementById('game'),
             favGoodies: []
         },
         {
+            name: 'Sunny',
+            description: 'Turkish Calico',
+            personality: 'Mischievous',
+            powerLevel: '120',
+            type: 'Regular',
+            favFood: 'Any',
+            memento: 'Shiny Acorn',
+            favGoodies: []
+        },
+        {
+            name: 'Fred',
+            description: 'Orange Tabby',
+            personality: 'Lady-Killer',
+            powerLevel: '150',
+            type: 'Regular',
+            favFood: 'Any',
+            memento: 'Seashell Earring',
+            favGoodies: []
+        },
+        {
             name: 'Joe DiMeowgio',
             description: 'Baseball Jersey',
             personality: 'Team Player',

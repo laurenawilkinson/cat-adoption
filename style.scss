@@ -115,21 +115,42 @@ footer{
         width: 30%;
         position: relative;
         
+        #cat-pic{
+            cursor: pointer;
+        }
+        
         .pet{
             content: url('images/assets/heart.png');
-            animation: heart 1s ease-in-out;
+            animation: heart 0.8s ease-in-out;
             animation-iteration-count: 1;
             animation-play-state: paused;
-            -webkit-animation: heart 1s ease-in-out;
-            //-webkit-animation-iteration-count: 1;
+            -webkit-animation: heart 0.8s ease-in-out;
+            -webkit-animation-iteration-count: 1;
             -webkit-animation-play-state: paused;
             position: absolute;
             opacity: 0;
+            transition: all 0.8s ease;
+            top: 80px;
+            left: 80px;
             
             @keyframes heart{
-                0% { opacity: 0; }
-                50% { opacity: 1; }
-                100% { opacity: 0; }
+                0% { 
+                    opacity: 0;
+                    top: 80px;
+                    left: 50px;
+                }
+                
+                50%{
+                    opacity: 1; 
+                    top: 60px;
+                    left:50px;
+                }
+                
+                100% { 
+                    opacity: 0;
+                    top: 35px;
+                    left: 30px;
+                }
             }
         }
         
