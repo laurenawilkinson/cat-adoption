@@ -1,108 +1,7 @@
 // variables
 let game = document.getElementById('game'),
     starters,
-    catArray = [
-        {
-            name: 'Snowball',
-            description: 'Solid White',
-            personality: 'Mellow',
-            powerLevel: '80',
-            type: 'Regular',
-            favFood: 'Any',
-            memento: 'Flowered Collar',
-            favGoodies: []
-        },
-        {
-            name: 'Smokey',
-            description: 'Solid Black',
-            personality: 'Hot and Cold',
-            powerLevel: '140',
-            type: 'Regular',
-            favFood: 'Any',
-            memento: 'Soft Brush',
-            favGoodies: []
-        },
-        {
-            name: 'Spots',
-            description: 'Black and White',
-            personality: 'Joker',
-            powerLevel: '75',
-            type: 'Regular',
-            favFood: 'Any',
-            memento: 'Glow Bracelet',
-            favGoodies: []
-        },
-        {
-            name: 'Shadow',
-            description: 'Solid Grey',
-            personality: 'Peculiar',
-            powerLevel: '50',
-            type: 'Regular',
-            favFood: 'Any',
-            memento: 'Cicada Skin',
-            favGoodies: []
-        },
-        {
-            name: 'Sunny',
-            description: 'Turkish Calico',
-            personality: 'Mischievous',
-            powerLevel: '120',
-            type: 'Regular',
-            favFood: 'Any',
-            memento: 'Shiny Acorn',
-            favGoodies: []
-        },
-        {
-            name: 'Fred',
-            description: 'Orange Tabby',
-            personality: 'Lady-Killer',
-            powerLevel: '150',
-            type: 'Regular',
-            favFood: 'Any',
-            memento: 'Seashell Earring',
-            favGoodies: []
-        },
-        {
-            name: 'Joe DiMeowgio',
-            description: 'Baseball Jersey',
-            personality: 'Team Player',
-            powerLevel: '28',
-            type: 'Rare',
-            favFood: 'Any',
-            memento: 'Baseball',
-            favGoodies: []
-        },
-        {
-            name: 'Senor Don Gato',
-            description: 'Mustachioed',
-            personality: 'Scheming',
-            powerLevel: '30',
-            type: 'Rare',
-            favFood: 'Any',
-            memento: 'Feathered Hat',
-            favGoodies: []
-        },
-        {
-            name: 'Xerxes IX',
-            description: 'Persian',
-            personality: 'Regal',
-            powerLevel: '70',
-            type: 'Rare',
-            favFood: 'Any',
-            memento: 'Pretty Stones',
-            favGoodies: []
-        },
-        {
-            name: 'Chairman Meow',
-            description: 'Camouflage',
-            personality: 'Boorish',
-            powerLevel: '111',
-            type: 'Rare',
-            favFood: 'Any',
-            memento: 'Dog Tag',
-            favGoodies: []
-        }
-      ],
+    catArray = require('cats.json'),
     myCat,
     starterElement,
     hungerBar,
@@ -204,7 +103,6 @@ function chosenStarter(item){
     nameInput.addEventListener("keyup", function(e) {
           e.preventDefault();
           if (e.keyCode === 13) {
-              
               if(nameInput.value === ''){
                   myCat.breed = myCat.name;
                   startGame(myCat);
@@ -225,6 +123,7 @@ function startGame(myCat){
     myCat.hunger = randomNum(40, 100);
     myCat.clean = randomNum(40, 100);
     myCat.info = `${myCat.name} is happy and healthy! :)`;
+    myCat.points = 0;
     myCat.feed = () => {
         if(myCat.hunger > 70){
             myCat.info = `${myCat.name} isnt hungry right now`;
@@ -234,6 +133,7 @@ function startGame(myCat){
             myCat.happiness += 20;
             myCat.energy += 10;
             myCat.clean -= 10;
+            myCat.points += 5;
             myCat.info = `You gave ${myCat.name} some food. They liked it!`;
             console.log(hungerBar.onclick);
         }
@@ -247,6 +147,7 @@ function startGame(myCat){
             myCat.energy -= 20;
             myCat.clean -= 30;
             myCat.hunger -= 20;
+            myCat.points += 5;
             myCat.info = `${myCat.name} enjoys playing with you`;
         }
         else if(myCat.happiness >= 75){
@@ -300,6 +201,7 @@ function startGame(myCat){
         else if(myCat.happiness < 20){
             myCat.energy -= 20;
             myCat.clean += 45;
+            myCat.points += 5;
             myCat.info = `You washed ${myCat.name}. They didnt like the water, but at least theyre clean!`;
         }
         else if(myCat.energy < 20){
@@ -316,6 +218,7 @@ function startGame(myCat){
         catItem.className = 'pet';
         catItem.style.AnimationPlayState = 'running';
         catItem.style.WebkitAnimationPlayState = 'running';
+        myCat.points += 1;
         setTimeout( () =>{
             catItem.style.AnimationPlayState = 'paused';
             catItem.style.WebkitAnimationPlayState = 'paused';
@@ -385,6 +288,12 @@ function startGame(myCat){
         checkBar(happinessBar, myCat.happiness);
         checkBar(hungerBar, myCat.hunger);
         checkBar(cleanBar, myCat.clean);
+
+        if(myCat.points >= 100){
+            myCat.info.innerHTML = "Congratulations! You earned {myCat.name}'s memento, {myCat.memento}!";
+            // add to inventory
+            // add to top right of cat profile
+        }
         
         // reset so bars dont exceed 100
         if (myCat.energy > 100){
@@ -396,7 +305,7 @@ function startGame(myCat){
         }else if (myCat.clean > 100){
             myCat.clean = 100;
         }
-    }, 1000);
+    }, 500);
     
     // bars depleat
     setInterval( () =>{

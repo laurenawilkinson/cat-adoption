@@ -1,0 +1,102 @@
+[
+        {
+            "name": "Snowball",
+            "description": "Solid White",
+            "personality": "Mellow",
+            "powerLevel": "80",
+            "type": "Regular",
+            "favFood": "Any",
+            "memento": "Flowered Collar",
+            "favGoodies": []
+        },
+        {
+            "name": "Smokey",
+            "description": "Solid Black",
+            "personality": "Hot and Cold",
+            "powerLevel": "140",
+            "type": "Regular",
+            "favFood": "Any",
+            "memento": "Soft Brush",
+            "favGoodies": []
+        },
+        {
+            "name": "Spots",
+            "description": "Black and White",
+            "personality": "Joker",
+            "powerLevel": "75",
+            "type": "Regular",
+            "favFood": "Any",
+            "memento": "Glow Bracelet",
+            "favGoodies": []
+        },
+        {
+            "name": "Shadow",
+            "description": "Solid Grey",
+            "personality": "Peculiar",
+            "powerLevel": "50",
+            "type": "Regular",
+            "favFood": "Any",
+            "memento": "Cicada Skin",
+            "favGoodies": []
+        },
+        {
+            "name": "Sunny",
+            "description": "Turkish Calico",
+            "personality": "Mischievous",
+            "powerLevel": "120",
+            "type": "Regular",
+            "favFood": "Any",
+            "memento": "Shiny Acorn",
+            "favGoodies": []
+        },
+        {
+            "name": "Fred",
+            "description": "Orange Tabby",
+            "personality": "Lady-Killer",
+            "powerLevel": "150",
+            "type": "Regular",
+            "favFood": "Any",
+            "memento": "Seashell Earring",
+            "favGoodies": []
+        },
+        {
+            "name": "Joe DiMeowgio",
+            "description": "Baseball Jersey",
+            "personality": "Team Player",
+            "powerLevel": "28",
+            "type": "Rare",
+            "favFood": "Any",
+            "memento": "Baseball",
+            "favGoodies": []
+        },
+        {
+            "name": "Senor Don Gato",
+            "description": "Mustachioed",
+            "personality": "Scheming",
+            "powerLevel": "30",
+            "type": "Rare",
+            "favFood": "Any",
+            "memento": "Feathered Hat",
+            "favGoodies": []
+        },
+        {
+            "name": "Xerxes IX",
+            "description": "Persian",
+            "personality": "Regal",
+            "powerLevel": "70",
+            "type": "Rare",
+            "favFood": "Any",
+            "memento": "Pretty Stones",
+            "favGoodies": []
+        },
+        {
+            "name": "Chairman Meow",
+            "description": "Camouflage",
+            "personality": "Boorish",
+            "powerLevel": "111",
+            "type": "Rare",
+            "favFood": "Any",
+            "memento": "Dog Tag",
+            "favGoodies": []
+        }
+]
