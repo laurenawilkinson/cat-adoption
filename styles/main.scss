@@ -1,11 +1,6 @@
-$gold: #f0ba46;
-$light-gold: #f4dfb9;
-
-@mixin heading-border{
-    background: white;
-    border-radius: 20px;
-    border: 3px solid $gold;
-}
+@import './vars';
+@import './mixins';
+@import './__game_start';
 
 body{
     text-align: center;
@@ -37,49 +32,10 @@ footer{
 #game{
     width: 100%;
     background: pink;
-    background-image: url('images/bg.png');
+    background-image: url('../images/bg.png');
     height: 400px;
     position: relative;
-    
-    .starter-tile{
-        width: 30%;
-        display: inline-block;
-        margin: 5px;
-        text-align: left;
-        height: auto;
-        position: relative;
-        @include heading-border;
-        background: $light-gold;
-        cursor: pointer;
-        
-        img, .starter-content{
-            display: inline-block;
-            padding: 5px;
-        }
-        
-        img{
-            padding-left: 10px;
-            vertical-align: super;
-        }
-        
-        h3{
-            margin: 0;
-        }
-        
-        .rare{
-            text-orientation: upright;
-            writing-mode: vertical-rl;
-            text-align: center;
-            background: gold;
-            float: right;
-            font-size: 0.6em;
-            height: inherit;
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-        }
-    }
+
     
     .heading{
         padding: 20px;
@@ -120,7 +76,7 @@ footer{
         }
         
         .pet{
-            content: url('images/assets/heart.png');
+            content: url('../images/assets/heart.png');
             animation: heart 0.8s ease-in-out;
             animation-iteration-count: 1;
             animation-play-state: paused;
@@ -215,7 +171,7 @@ footer{
 
         &:after{
             opacity: 0;
-            content: url('images/assets/pawprint.png');
+            content: url('../images/assets/pawprint.png');
             position: absolute;
             transition: all 0.2s ease-in-out;
             right:5%;
@@ -299,25 +255,6 @@ footer{
                 padding: 5px;
             }
         }
-    }
-}
-
-#marquee{
-    position: absolute;
-    bottom:0;
-    left: 0;
-    animation: marquee 15s linear infinite;
-    overflow: hidden;
-    
-    img{
-        padding: 20px;
-        display: inline-block;
-    }
-    
-    @keyframes marquee{
-        0% { transform:translateX(100%); }
-        50% { transform:translateX(0); }
-        100% { transform:translateX(-100%); }
     }
 }
 
